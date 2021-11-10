@@ -35,26 +35,8 @@ namespace DapperDemo.Controllers
             return View(_empRepo.GetAll()) ;
         }
 
-        // GET: Companies/Details/5
-        //public async Task<IActionResult> Details(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var company = _compRepo.find(id.GetValueOrDefault());
-
-            
-        //    if (company == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(company);
-        //}
-
-        // GET: Companies/Create
+      
+       
         public IActionResult Create()
         {
            IEnumerable<SelectListItem> companyList = _compRepo.GetAll().Select(i => new SelectListItem
@@ -67,9 +49,8 @@ namespace DapperDemo.Controllers
             return View();
         }
 
-        // POST: Companies/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+       
+     
         [HttpPost]
         [ValidateAntiForgeryToken]
         [ActionName("Create")]
@@ -84,7 +65,6 @@ namespace DapperDemo.Controllers
             return View(Employee);
         }
 
-        // GET: Companies/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -101,9 +81,6 @@ namespace DapperDemo.Controllers
             return View(Employee);
         }
 
-        // POST: Companies/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id)
@@ -123,7 +100,6 @@ namespace DapperDemo.Controllers
             return View(Employee);
         }
 
-        // GET: Companies/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
