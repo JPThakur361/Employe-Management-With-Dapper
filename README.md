@@ -1,4 +1,4 @@
-# DapperDemo
+# DapperDemo(Employee Management)
 
 I have implemented Dapper, one of my preferred ORMs, using the Repository Pattern and compared it with Entity Framework. For this project, you will need Visual Studio 2019 and SQL Server Management Studio 2019.
 
